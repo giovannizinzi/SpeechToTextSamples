@@ -22,13 +22,12 @@ def recognized(args):
 
 # Create a speech configuration using the following:
 #  The API key and region loaded from the .env file
-#  The language that will be recognized, in this example Great British English (en-GB)
 #
 # See https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/language-support?WT.mc_id=build2020_ca-github-jabenn
 # for the list of supported languages that can be recognized
 speech_config = speechsdk.SpeechConfig(subscription=key,
                                        region=region,
-                                       speech_recognition_language="en-GB")
+                                       speech_recognition_language="en-US")
 
 # Create a speech recognizer
 recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config)
